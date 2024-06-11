@@ -24,7 +24,10 @@ import { DetalleComponent } from './ingreso-egreso/detalle/detalle.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
-import { environment } from '../environments/environment'
+import { environment } from '../environments/environment';
+import { OrdenIngresoPipe } from './pipes/orden-ingreso.pipe'
+import { NgChartsModule } from 'ng2-charts';
+
 
 
 @NgModule({
@@ -39,6 +42,7 @@ import { environment } from '../environments/environment'
     SidebarComponent,
     FooterComponent,
     NavbarComponent,
+    OrdenIngresoPipe,
   ],
   imports: [
     BrowserModule,
@@ -57,6 +61,7 @@ import { environment } from '../environments/environment'
       traceLimit: 75, // maximum stack trace frames to be stored (in case trace option was provided as true)
       connectInZone: true // If set to true, the connection is established within the Angular zone
     }),
+    NgChartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
