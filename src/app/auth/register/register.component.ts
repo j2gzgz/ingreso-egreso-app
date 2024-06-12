@@ -37,7 +37,7 @@ export class RegisterComponent implements OnInit, OnDestroy{
     this.uiSubcriptions = this.store.select('ui')
                               .subscribe( ui =>  {
                                 this.cargando = ui.isLoading;
-                                console.log('Cargado subs');
+                                //console.log('Cargado subs');
                               });    
   }
 
@@ -60,7 +60,7 @@ export class RegisterComponent implements OnInit, OnDestroy{
 
     this.authService.crearUsuario(nombre, correo, password)
       .then( credenciales =>{
-        console.log(credenciales);
+        //console.log(credenciales);
         //  Swal.close();
         this.store.dispatch( ui.stopLoading() );
         this.router.navigate(['/']);

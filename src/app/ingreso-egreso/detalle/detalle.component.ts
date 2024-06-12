@@ -31,7 +31,7 @@ export class DetalleComponent implements OnInit, OnDestroy{
 
   
   borrar(uid: string | undefined) {
-    console.log(uid);
+    //console.log(uid);
     this.ingresoEgresoSevice.borrarIngresoEgreso(uid)
       .then(
         () => Swal.fire('Borrado','Item borrado','success')
