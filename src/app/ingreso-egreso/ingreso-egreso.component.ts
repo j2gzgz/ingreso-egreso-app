@@ -29,7 +29,7 @@ export class IngresoEgresoComponent implements OnInit,  OnDestroy{
     this.uiSubcriptions = this.store.select('ui')
                               .subscribe( ui =>  {
                                 this.cargando = ui.isLoading;
-                                console.log('Cargado subs');
+                               // console.log('Cargado subs');
                               });
 
     this.ingresoForm = this.fb.group({

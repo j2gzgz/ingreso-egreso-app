@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AppState } from '../../app.reducer';
+//import { AppState } from '../../app.reducer';
+import { AppStateWithIngresoEgreso } from '../increso-egreso.reducer';
+
 import { Store } from '@ngrx/store';
 import { IngresoEgreso } from '../../models/ingreso-egreso.model';
 
@@ -20,7 +22,7 @@ export class EstadisticaComponent implements OnInit{
   totalIngresos: number = 0;
   totalEgresos: number = 0;
 
-  constructor( private store: Store<AppState>){}
+  constructor( private store: Store<AppStateWithIngresoEgreso>){}
 
   // Pie
   pieChartOptions: ChartOptions<'pie'> = { responsive: false };
